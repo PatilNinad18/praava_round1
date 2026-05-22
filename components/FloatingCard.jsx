@@ -9,7 +9,6 @@ export default function FloatingCard({
   animationClass = "",
 
   /* CUSTOMIZATION */
-
   width = "w-[420px]",
   height = "h-[110px]",
 
@@ -37,7 +36,6 @@ export default function FloatingCard({
         `}
       >
         {/* ICON */}
-
         <div
           className="
             flex h-[60px] w-[60px]
@@ -48,15 +46,10 @@ export default function FloatingCard({
             shrink-0
           "
         >
-          <Icon
-            size={iconSize}
-            strokeWidth={2.4}
-            style={{ color: iconColor }}
-          />
+          <Icon size={iconSize} strokeWidth={2.4} style={{ color: iconColor }} />
         </div>
 
         {/* LABEL */}
-
         <span
           className={`
             ${textSize}

@@ -1,17 +1,32 @@
 @import "tailwindcss";
 
-
+/* ─────────────────────────────────────────
+   FLOATING ANIMATIONS
+───────────────────────────────────────── */
 @keyframes floatY {
   0% {
     transform: translateY(0px);
   }
-
   50% {
     transform: translateY(-10px);
   }
-
   100% {
     transform: translateY(0px);
+  }
+}
+
+/* Reduce float distance on smaller screens */
+@media (max-width: 1023px) {
+  @keyframes floatY {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
   }
 }
 
@@ -35,3 +50,11 @@
   animation: floatY 4.6s ease-in-out infinite;
 }
 
+/* ─────────────────────────────────────────
+   PREVENT HORIZONTAL OVERFLOW ON MOBILE
+───────────────────────────────────────── */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
