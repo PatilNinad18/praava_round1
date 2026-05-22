@@ -6,11 +6,11 @@ import { useEffect, useState } from "react";
 
 import {
   Receipt,
-  BriefcaseBusiness,
   CheckSquare,
   FileText,
   Moon,
   Sun,
+  Scale,
 } from "lucide-react";
 
 import FloatingCard from "@/components/FloatingCard";
@@ -170,17 +170,18 @@ export default function Page() {
       <section className="relative mx-auto flex min-h-screen max-w-[1500px] justify-between px-12 pt-[80px]">
         {/* LEFT */}
 
-        <div className="relative z-10 ml-[148px] w-[520px] pt-[5px]">
+        <div className="relative z-10 ml-[148px] w-[520px] -mt-[50px]">
           <h1
             className={`
               text-[58px]
               leading-[1.15]
               tracking-[-0.04em]
               transition-all duration-500
+              font-thin
               ${
                 darkMode
                   ? "text-[#9ea2d8]"
-                  : "text-[#7b7ea8]"
+                  : "text-[#7277a8]"
               }
             `}
           >
@@ -190,7 +191,7 @@ export default function Page() {
             <span className="whitespace-nowrap">
               <span
                 className={`
-                  font-bold
+                  font-medium
                   ${
                     darkMode
                       ? "text-[#b4b7ff]"
@@ -208,7 +209,7 @@ export default function Page() {
             your{" "}
             <span
               className={`
-                font-bold
+                font-medium
                 ${
                   darkMode
                     ? "text-[#b4b7ff]"
@@ -223,7 +224,7 @@ export default function Page() {
           <p
             className={`
               mt-6 max-w-[420px]
-              text-[16px]
+              text-[18px]
               leading-[1.8]
               transition-all duration-500
               ${
@@ -259,7 +260,7 @@ export default function Page() {
             color="bg-[#e67e22]"
             rotation="-rotate-[11deg]"
             animationClass="float-matters"
-            icon={BriefcaseBusiness}
+            icon={Scale}
             label="Matters"
             width="w-[355px]"
             height="h-23"
